@@ -15,6 +15,9 @@ Role Variables
     that comes with the Debian package. Useful when you want to use
     the cron in the geerlingguy.certbot role instead.
 
+    certbot_host_with_certs: host where you want to copy certificates
+    from, e.g. "example.com".
+
 In addition to this all the variables from the geerlingguy.certbot
 role are available.
 
