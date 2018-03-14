@@ -25,6 +25,7 @@ Dependencies
 ------------
 
 ajsalminen.file_sync
+
 geerlingguy.certbot
 
 Example Playbook
