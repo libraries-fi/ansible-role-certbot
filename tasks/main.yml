@@ -1,7 +1,7 @@
 ---
 
-- name: Disable certbot cron
+- name: Delete certbot cron
   file:
     path: /etc/cron.d/certbot
-    mode: "u-x,g-x,o-x"
+    state: absent
   when: certbot_disable_certbot_cron
