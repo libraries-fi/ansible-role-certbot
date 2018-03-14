@@ -1,0 +1,18 @@
+---
+galaxy_info:
+  author: Joonas Kylmäkä
+  description: "Create Let's encrypt certificates"
+  company: Kirjastot.fi
+  license: MIT
+  min_ansible_version: 2.4
+
+dependencies:
+  - role: ajsalminen.file_sync
+    file_sync_config:
+      - source: "{{ certbot_host_with_certs }}"
+        dirs:
+          - source: /etc/letsencrypt
+            target: /etc/
+    when: site_content_sync|default(false)
+
+  - role: geerlingguy.certbot
