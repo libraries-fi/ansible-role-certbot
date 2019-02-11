@@ -5,3 +5,10 @@
     path: /etc/cron.d/certbot
     state: absent
   when: certbot_disable_certbot_cron
+
+- name: Disable certbot timer
+  service:
+    name: certbot.timer
+    state: stopped
+    enabled: false
+  when: certbot_disable_certbot_cron
